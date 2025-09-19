@@ -910,8 +910,9 @@ public partial class MainWindow : Window
         {
             return;
         }
-        ViewModel.IsClosing = true;
-        Close();
+        //ViewModel.IsClosing = true;
+        //Close();
+        return;
     }
     private void MenuItemRestartApp_OnClick(object sender, RoutedEventArgs e)
     {
