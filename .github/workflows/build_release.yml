@@ -14,7 +14,7 @@ jobs:
     runs-on: windows-latest
     env:
       artifact_name: out_app_windows_x64_singleFile
-      arch: x64
+      arch: win-x64
       trim_assets: 'false'
       package: singleFile
     name: Build_windows_x64_singleFile
@@ -31,9 +31,9 @@ jobs:
 
       # Install the .NET Core workload
       - name: Install .NET Core
-        uses: actions/setup-dotnet@v3
+        uses: actions/setup-dotnet@v2
         with:
-          dotnet-version: 8.0.x
+          dotnet-version: 8.0.20
 
       # Add  MSBuild to the PATH
       - name: Setup MSBuild.exe
@@ -46,7 +46,7 @@ jobs:
           arch: win-x64
         run: |
           ls
-          pwsh -ep Bypass -c ./tools/release-gen/publish.ps1 
+          pwsh -ep Bypass -c ./tools/release-gen/publish.ps1 false x64
 
       - name: Upload exe to artifacts
         uses: actions/upload-artifact@v4
