@@ -43,7 +43,7 @@ jobs:
         env:
           trim_assets: ${{ env.trim_assets }}
           package: ${{ env.package }}
-          arch: ${{ env.arch }}
+          arch: win-x64
         run: |
           ls
           pwsh -ep Bypass -c ./tools/release-gen/publish.ps1 $env.trim_assets $env.arch
@@ -53,4 +53,4 @@ jobs:
         with:
           name: ${{ env.artifact_name }}
           path: |
-            ./out/*.exe
+            ./out/*
