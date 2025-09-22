@@ -1,8 +1,8 @@
 using System.Reflection;
 using System.Runtime.Versioning;
 
-[assembly: AssemblyVersion(ThisAssembly.Git.BaseTag)]
-[assembly: AssemblyInformationalVersion($"{ThisAssembly.Git.BaseTag}+{ThisAssembly.Git.Sha}")]
+[assembly: AssemblyVersion("114.514.1919.810")]
+[assembly: AssemblyInformationalVersion("114.514.1919.810")]
 [assembly: AssemblyTitle("ClassIsland")]
 [assembly: AssemblyProduct("ClassIsland")]
 #if NETCOREAPP
